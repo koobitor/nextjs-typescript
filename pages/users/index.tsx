@@ -30,7 +30,7 @@ const WithInitialProps: NextPage<Props> = ({ items, pathname }) => (
 
 WithInitialProps.getInitialProps = async ({ pathname }) => {
   const items: User[] = await sampleFetchWrapper(
-    'http://localhost:3000/api/users'
+    `${process.env.API}/api/users`
   );
   return { items, pathname };
 };

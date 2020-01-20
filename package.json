@@ -7,14 +7,17 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "export": "cross-env NEXT_EXPORT=true next build && cross-env NEXT_EXPORT=true next export"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.26.7",
     "babel-plugin-import": "^1.13.0",
+    "dotenv": "^8.2.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.2.0",
+    "next-offline": "^4.0.6",
     "null-loader": "^3.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -26,6 +29,7 @@
     "@types/react-dom": "^16.9.4",
     "@types/styled-components": "^4.4.2",
     "babel-plugin-styled-components": "^1.10.6",
+    "cross-env": "^6.0.3",
     "typescript": "^3.7.5"
   }
 }
